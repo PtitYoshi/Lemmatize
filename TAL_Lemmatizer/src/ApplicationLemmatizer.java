@@ -8,18 +8,29 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public class ApplicationLemmatizer {
+	
+	/* TODO : vérifier grace à l'api jdm que les mots générés existent */
 
 	public static void main(String[] args) {
 		// Les regles sont regroupées par la terminaison du prédicat.
 		// Il suffit donc de parcourir les clés de la Map pour avoir toutes les terminaisons qu'on peut transformer.
 		Map<String, ArrayList<Rule>> categorie = new HashMap<String, ArrayList<Rule>>();
-		File f = new File("regles");
+		String nom = "regles";
 		
-		generateRule(categorie, f);
-		editWord(categorie, "manquer");
+		generateRule(categorie, nom);
+//		System.out.println("\n- - - - - - - - - - Création des regles");
+//		System.out.println(categorie);
+		
+		String mot = "manger";
+		ArrayList<String> lstDerivation = editWord(categorie, mot);
+		System.out.println("\n- - - - - - - - - - Création des mots dérivés de '" + mot + "'");
+		System.out.println(lstDerivation);
+		
+		System.out.println("\n- - - - - - - - - - Vérification de l'existance des mots");
 	}
 	
-	public static void generateRule(Map<String, ArrayList<Rule>> c, File f) {
+	private static void generateRule(Map<String, ArrayList<Rule>> c, String nom) {
+		File f = new File(nom);
 		BufferedReader br = null;
 		try {
 			br = new BufferedReader(new FileReader(f));
@@ -45,12 +56,8 @@ public class ApplicationLemmatizer {
 			e.printStackTrace();
 		}
 	}
-
-	/* TODO : generer (grace aux regles) les différentes possibilité
-	 * puis vérifier grace à jeux de mot qu'il existe (récupérer l'api)
-	 * */
 	
-	private static void editWord(Map<String, ArrayList<Rule>> c, String mot) {
+	private static ArrayList<String> editWord(Map<String, ArrayList<Rule>> c, String mot) {
 		ArrayList<String> lstNewWords = new ArrayList<String>();
 		
 		for (Entry<String, ArrayList<Rule>> entry : c.entrySet()) {
@@ -66,10 +73,8 @@ public class ApplicationLemmatizer {
 						lstNewWords.add(newWord);
 					}
 				}
-				// pour chaque regle de entry.getValue(), ajouter le nouveau mot à la liste lstNewWords
 			}
 		}
-		
-		System.out.println(lstNewWords);
+		return lstNewWords;
 	}
 }
