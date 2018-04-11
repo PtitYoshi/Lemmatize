@@ -29,7 +29,7 @@ public class Rule {
 	public void setNewSuffixe(String newSuffixe) { this.newSuffixe = newSuffixe; }
 
 	public String toString() {
-		return tag + " : " + suffixe + " => " + newTag + " : " + newSuffixe;
+		return tag + ":" + suffixe + " => " + newTag + ":" + newSuffixe;
 	}
 	
 // Methodes
