@@ -16,7 +16,7 @@ public class ApplicationLemmatizer {
 		File f = new File("regles");
 		
 		generateRule(categorie, f);
-		editWord(categorie, "manger");
+		editWord(categorie, "manquer");
 	}
 	
 	public static void generateRule(Map<String, ArrayList<Rule>> c, File f) {
@@ -55,11 +55,13 @@ public class ApplicationLemmatizer {
 		
 		for (Entry<String, ArrayList<Rule>> entry : c.entrySet()) {
 			if (mot.endsWith(entry.getKey())) {
-//				System.out.println(entry.getKey());
 				String base = mot.substring(0, mot.length()-entry.getKey().length());
-//				System.out.println(base);
 				for (Rule r : entry.getValue()) {
-					if (!r.getLstException().contains(base.substring(base.length()-1))) {
+					boolean finExc = false;
+					for (String s : r.getLstException()) {
+						if (base.endsWith(s)) finExc = true;
+					}
+					if (!finExc) {
 						String newWord = base + r.getNewSuffixe();
 						lstNewWords.add(newWord);
 					}
