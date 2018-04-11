@@ -2,10 +2,14 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import RequeterRezo.Mot;
+import RequeterRezo.RequeterRezo;
 
 public class ApplicationLemmatizer {
 	
@@ -26,7 +30,8 @@ public class ApplicationLemmatizer {
 		System.out.println("\n- - - - - - - - - - Création des mots dérivés de '" + mot + "'");
 		System.out.println(lstDerivation);
 		
-		System.out.println("\n- - - - - - - - - - Vérification de l'existance des mots");
+		checkWords(lstDerivation);
+//		System.out.println("\n- - - - - - - - - - Vérification de l'existance des mots");
 	}
 	
 	private static void generateRule(Map<String, ArrayList<Rule>> c, String nom) {
@@ -76,5 +81,20 @@ public class ApplicationLemmatizer {
 			}
 		}
 		return lstNewWords;
+	}
+
+	private static void checkWords(ArrayList<String> lstDeriv) {
+		try {
+			RequeterRezo systeme = new RequeterRezo("48h", 3000);
+			Mot mot = systeme.requete("chat");
+//			System.out.println(mot.getDefinition());
+			// check pour chaque mot s'il existe
+		} catch(InterruptedException e) {
+			e.printStackTrace();
+		} catch(MalformedURLException e) {
+			e.printStackTrace();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
