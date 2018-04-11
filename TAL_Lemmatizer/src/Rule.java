@@ -1,4 +1,3 @@
-
 public class Rule {
 
 	private String tag;
@@ -6,51 +5,33 @@ public class Rule {
 	private String newTag;
 	private String newSuffixe;
 	
-	public Rule() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public Rule(String tag, String suf, String newTag, String newSuf)
-	{
-		this.tag=tag;
-		this.suffixe=suf;
-		this.newTag=newTag;
-		this.newSuffixe=newSuf;
-	}
 
-	
-	//Accesseurs
-	
-	public String getSuffixe() {
-		return suffixe;
-	}
-
-	public void setSuffixe(String suffixe) {
-		this.suffixe = suffixe;
-	}
-
-	public String getTag() {
-		return tag;
-	}
-
-	public void setTag(String tag) {
+// Constructeurs
+	public Rule(String tag, String suf, String newTag, String newSuf) {
 		this.tag = tag;
-	}
-
-	public String getNewTag() {
-		return newTag;
-	}
-
-	public void setNewTag(String newTag) {
+		this.suffixe = suf;
 		this.newTag = newTag;
+		this.newSuffixe = newSuf;
 	}
+	
+	
+// Accesseurs
+	// Get
+	public String getTag() { return tag; }
+	public String getSuffixe() { return suffixe; }
+	public String getNewTag() { return newTag; }
+	public String getNewSuffixe() { return newSuffixe; }
 
-	public String getNewSuffixe() {
-		return newSuffixe;
+	//Set
+	public void setTag(String tag) { this.tag = tag; }
+	public void setSuffixe(String suffixe) { this.suffixe = suffixe; }
+	public void setNewTag(String newTag) { this.newTag = newTag; }
+	public void setNewSuffixe(String newSuffixe) { this.newSuffixe = newSuffixe; }
+
+	public String toString() {
+		return tag + " : " + suffixe + " => " + newTag + " : " + newSuffixe;
 	}
-
-	public void setNewSuffixe(String newSuffixe) {
-		this.newSuffixe = newSuffixe;
-	}
-
+	
+// Methodes
+	// Yen a pas encore
 }
