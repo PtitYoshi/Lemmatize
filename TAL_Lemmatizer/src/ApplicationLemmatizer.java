@@ -26,12 +26,19 @@ public class ApplicationLemmatizer {
 			String sCurrentLine;
 			while ((sCurrentLine = br.readLine()) != null) {
 				String[] regle = sCurrentLine.split(";");
-				String[] part1 = regle[0].split(":");
-				String[] part2 = regle[1].split(":");
-				if (c.get(part1[1]) == null) {
-					c.put(part1[1], new ArrayList<Rule>());
+				String[] predicat = regle[0].split(":");
+				String[] conclusion = regle[1].split(":");
+				if (c.get(predicat[1]) == null) {
+					c.put(predicat[1], new ArrayList<Rule>());
 				}
-				c.get(part1[1]).add(new Rule(part1[0], part1[1], part2[0], part2[1]));
+				ArrayList<String> exc = new ArrayList<String>();
+				if (regle.length == 3) {
+					String[] exception = regle[2].split(",");
+					for (String s : exception) {
+						exc.add(s);
+					}
+				}
+				c.get(predicat[1]).add(new Rule(predicat[0], predicat[1], conclusion[0], conclusion[1], exc));
 			}
 			br.close();
 		} catch(IOException e) {
@@ -46,11 +53,21 @@ public class ApplicationLemmatizer {
 	private static void editWord(Map<String, ArrayList<Rule>> c, String mot) {
 		ArrayList<String> lstNewWords = new ArrayList<String>();
 		
-		for(Entry<String, ArrayList<Rule>> entry : c.entrySet()) {
+		for (Entry<String, ArrayList<Rule>> entry : c.entrySet()) {
 			if (mot.endsWith(entry.getKey())) {
-				//enlever la terminaison (la clés ci-dessus) du mot
+//				System.out.println(entry.getKey());
+				String base = mot.substring(0, mot.length()-entry.getKey().length());
+//				System.out.println(base);
+				for (Rule r : entry.getValue()) {
+					if (!r.getLstException().contains(base.substring(base.length()-1))) {
+						String newWord = base + r.getNewSuffixe();
+						lstNewWords.add(newWord);
+					}
+				}
 				// pour chaque regle de entry.getValue(), ajouter le nouveau mot à la liste lstNewWords
 			}
 		}
+		
+		System.out.println(lstNewWords);
 	}
 }
