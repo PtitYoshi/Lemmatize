@@ -7,4 +7,5 @@ verbe:ger;nom:geoire;
 verbe:cer;nom:çoire;
 verbe:er;adj:ant;g
 verbe:ger;adj:geant;
+verbe:ger;verbe:geant;
 verbe:er;nom:azerty;qu
