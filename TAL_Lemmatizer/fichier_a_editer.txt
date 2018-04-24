@@ -1,144 +1,110 @@
 verbe:er	;	nom:eur		;
 verbe:er	;	nom:euse	;
-verbe:er	;	nom:able	;	g
-verbe:ger	;	nom:geable	;
+verbe:er	;	nom:oir		;	g
+verbe:ger	;	nom:geoir	;
 verbe:er	;	nom:oire	;	g,c
 verbe:ger	;	nom:geoire	;
 verbe:cer	;	nom:çoire	;
-verbe:er	;	adj:ant		;	g
-verbe:ger	;	adj:geant	;
-verbe:er	;	nom:age		;
-
-
-
-
-
-verbe:er;nom:e 
-verbe:er;adj:ant
-verbe:er;adj:eant
-verbe:er;adj:ible
-verbe:er;nom:ail
-verbe:er;nom:aille
-verbe:er;nom:ation
-verbe:er;nom:ant
-verbe:er;nom:able
-verbe:er;nom:eable
-verbe:er;nom:ette
-verbe:ner;nom:naison
-verbe:ner;agent:nier
-verbe:ner;nom:naison
-verbe:ter:nom:tement
-verbe:ser;nom:sation
-verbe:uer;nom:cation
-verbe:ger;nom:geur
-verbe:ister;nom:istance
-verbe:quer;nom:cation
-verbe:quer;nom:quage
-verbe:dir;nom:d
-verbe:lir;nom:lissage
-verbe:ller;nom:l
-verbe:” “;nom:iteur 
-verbe:” “;nom:ateur
-nom:” “;adj:able
-nom:” “;Nom:age
-nom:” “;nom:aison
-nom:” “;nom:isme
-nom:” “;nom:iste
-nom:” “;verbe:ir
-nom:" ";nom:aire
-nom:" ";nom:iaire
-nom:" ";nom:ale
-nom:" ";nom:al
-nom:" ";adj:al
-nom:" ";adj:ale
-nom:" ";adj:elle
-nom:" ";adj:acé  
-nom:" ";adj:an
-nom:" ";adj:ane
-nom:" ":adj:ain
-nom:" ":adj:aine
-nom:" ";nom:ard
-nom:" ";nom:arde
-nom:ier;Nom:eraie
-nom:eur;nom:euse
-nom:er;nom:ance
-nom:ale;nom:ales
-nom:al;nom:aux
-adj:” ”;adv:ante
-adj:ant;adv:amment
-adj:ante;adv:amment
-adj:tif;nom:tivité
-adv:ant;nom:ance
-adv:ante;nom:ance
-
-
-
-
-
-
-$x . ‘er’ => $x . ‘eur’ ; “verbe vers agent” (exemple : miner => mineur) ; Y r_isA personne
-$x.’er’=>$x.’euse’ ; “verbe vers agent” (exemple : chanter => chanteuse)
-$x.’ger’=>$x.’geoire’ ; “verbe vers lieu” (exemple : manger => mangeoire)
-$x.’er’=>$x.’oire’ ; “verbe vers lieu” (exemple : patiner => patinoire)
-$x.’er’=>$x.’oir’ ; “verbe vers lieu” (exemple : egoutter => egouttoir)
-$x.’er’=>$x.’age’ ; “verbe vers nom d’action” (exemple : bavarder => bavardage)
-Verbe:er;nom:e; 
-Verbe:er;adj:ant
-verbe:ner;agent:nier
-Verbe:er;nom:ette
-$x.’uire’=>$x.’ction’ ; “verbe vers nom” (exemple : induire => induction)
-$x.’uire’=>$x.’cteur’ ; “verbe vers agent” (exemple : conduire => conducteur)
-$x.’uire’=>$x.’ctrice’ ; “verbe vers agent” (exemple : conduire => conductrice)
-Verbe:ister;nom:istance
-verbe:er;nom:able
-$x.’ger’=>$x.’gement’ ; “verbe vers nom” (exemple : déranger => dérangement)
-verbe:ger;nom:geur
-verbe:ner;nom:naison
-verbe:quer;nom:cation
-verbe:ner;nom:naison
-verbe:ser;nom:sation
-verbe:quer;nom:quage
-Verbe:ter:nom:tement
-Verbe:dir;nom:d
-Verbe:lir;nom:lissage
-verbe:er;nom:ant
-verbe:ller;nom:l
-Verbe:uer;nom:cation
-Nom:” “;adj:able
-Verbe:”er”;adj:ible
-Nom:” “;Nom:”age”
-Nom:”ier”;Nom:”eraie”
-Verbe:”er”;Nom:”ail”
-Verbe:”er;Nom:”aille”
-adj:””:adv:”ante”
-Nom:” “;nom:”aison”
-Nompropre:” “;nom:”oise”
-Verbe:” “;nom:”ateur”
-Verbe:”er”;nom:”ation”
-Nom:” “;nom:”isme”
-Nom:” “;nom:”iste”
-Nom:” “;verbe:”ir”
-Verbe:” “;nom:”iteur” 
-nom:eur;nom:euse
-nom:er;nom:ance
-nom:" ";nom:aire
-nom:" ";nom:iaire
-nom:" ";nom:ale
-nom:" ";nom:al
-nom:" ";adj:al
-nom:"ale";nom:ales
-nom:"al", nom:aux
-nom:" ";adj:ale
-nom: " ";adj:elle
-nom" ";adj:acé  
-nom:"" ;adj:an
-nom:"" ;adj:ane
-adj:ant:adv:amment
-adj:ante;adv:amment
-adj:tif:nom:tivité
-adv:ant:nom:an0ce
-adv:ante:nom:ance
-nom:"":adj:ain
-nom:"":adj:aine
-nom:""nom"ard"
-nom:"";:nom"arde"
+verbe:er	;	nom:age		;	g
+verbe:ger	;	nom:geage	;
+verbe:er	;	nom:ail		;	g
+verbe:ger	;	nom:geail	;
+verbe:er	;	nom:aille	;	g
+verbe:ger	;	nom:geaille	;
+verbe:er	;	nom:ation	;	qu
+verbe:quer	;	nom:cation	;
+verbe:er	;	nom:ance	;	g
+verbe:ger	;	nom:geance	;
+verbe:uer	;	nom:ution	;
+verbe:er	;	nom:ement	;
+verbe:er	;	nom:e		;
+verbe:er	;	nom:aison	;	g
+verbe:ger	;	nom:geaison	;
+verbe:cer	;	nom:ciation	;
+verbe:er	;	nom:ard		;
+verbe:er	;	nom:arde	;
+verbe:ner	;	nom:nier	;
+verbe:er	;	nom:ette	;
+verbe:er	;	nom:ant		;
+verbe:er	;	nom:ante	;
+verbe:er	;	adj:elle	;
+verbe:er	;	adj:ible	;
+verbe:uire	;	nom:uction	;
+verbe:uire	;	nom:ucteur	;
+verbe:uire	;	nom:uctrice	;
+verbe:ir	;	nom:se		;
+verbe:ir	;	nom:issement;
+verbe:ir	;	nom:ison	;
+verbe:ir	;	nom:isseur	;
+verbe:ir	;	nom:isseuse	;
+verbe:dir	;	nom:d		;
+verbe:dir	;	adj:d		;
+verbe:dir	;	adv:d		;
+verbe:lir	;	nom:lissage	;
+verbe:lir	;	nom:lissement;
+verbe:er	;	verbe:ant	;	g
+verbe:ger	;	verbe:geant	;
+verbe:er	;	verbe:ante	;	g
+verbe:ger	;	verbe:geante;
+verbe:er	;	verbe:e		;
+verbe:er	;	verbe:es	;
+verbe:er	;	verbe:ons	;
+verbe:er	;	verbe:ez	;
+verbe:er	;	verbe:ent	;
+verbe:uire	;	verbe:uis	;
+verbe:uire	;	verbe:uit	;
+verbe:uire	;	verbe:uisons;
+verbe:uire	;	verbe:uisez	;
+verbe:uire	;	verbe:uisent;
+verbe:ir	;	verbe:s		;
+verbe:ir	;	verbe:t		;
+verbe:ir	;	verbe:ssons	;
+verbe:ir	;	verbe:ssez	;
+verbe:ir	;	verbe:ssent	;
+verbe:dre	;	verbe:ds	;
+verbe:dre	;	verbe:d		;
+verbe:dre	;	verbe:dons	;
+verbe:dre	;	verbe:dez	;
+verbe:dre	;	verbe:dent	;
+nom:e		;	verbe:er	;
+nom:e		;	nom:ette	;
+nom:e		;	nom:ier		;
+nom:"		;	nom:s		;
+nom:al		;	nom:aux		;
+nom:"		;	nom:isme	;	e
+nom:e		;	nom:isme	;
+nom:"		;	nom:iste	;	e
+nom:e		;	nom:iste	;
+nom:e		;	nom:ère		;
+nom:que		;	nom:cain	;
+nom:que		;	nom:caine	;
+nom:ain		;	nom:aine	;
+nom:an		;	nom:ane		;
+nom:eur		;	nom:euse	;
+nom:ucteur	;	nom:uctrice	;
+nom:ard		;	nom:eur		;
+nom:ard		;	nom:euse	;
+nom:ant		;	nom:ance	;
+nom:e		;	adj:al		;
+nom:ant		;	adj:anal	;
+nom:ance	;	adj:ant		;
+nom:tion	;	adj:tieux	;
+nom:ou		;	nom:oux		;
+nom:o		;	nom:ard		;
+nom:o		;	nom:arde	;
+nom:"		;	nom:age		;
+nom:e		;	nom:age		;
+nom:on		;	nom:onnage	;
+nom:air		;	nom:aire	;
+nom:aire	;	nom:arisme	;
+nom:"		;	adj:âtre	;	t
+nom:t		;	adj:dâtre	;
+verbe:er	;	adj:able	;	g
+verbe:ger	;	adj:geable	;
+nom:ation	;	adj:able	;
+adj:ent		;	adj:ible	;
+adj:ent		;	adv:emment	;
+adj:tif		;	nom:tivité	;
+adj:al		;	adj:aux		;
+adj:al		;	adj:ale		;
+adj:el		;	adj:elle	;
