@@ -39,7 +39,6 @@ public class ApplicationLemmatizer {
 				System.out.println("    " + r);
 			}
 		}
-//		System.out.println(categorie);
 		
 		System.out.println("- - - - - - - - - - RECUPERATION DES MOTS");
 		pickWords(mesMots, rulesFileName);
@@ -84,16 +83,6 @@ public class ApplicationLemmatizer {
 			System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\n\n");
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -222,7 +211,7 @@ public class ApplicationLemmatizer {
 		}
 		ArrayList<String> sortie = new ArrayList<String>();
 		for (Terme t : termes) {
-			String classe = null; //TODO verifier juste le debut du truc envoyer
+			String classe = null;
 			if (t.getTerme().startsWith("Adj:")) {
 				classe = "adj";
 			} else if (t.getTerme().startsWith("Nom:")) {

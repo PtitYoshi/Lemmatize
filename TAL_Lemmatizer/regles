@@ -1,4 +1,10 @@
 MOT#manger
+#commentaire
+MOT#finir
+MOT#cheville
+MOT#rouge
+MOT#partir
+MOT#laver
 
 REG#verbe:er;nom:eur;
 REG#verbe:er;nom:euse;
@@ -13,8 +19,9 @@ REG#verbe:er;nom:ail;g
 REG#verbe:ger;nom:geail;
 REG#verbe:er;nom:aille;g
 REG#verbe:ger;nom:geaille;
-REG#verbe:er;nom:ation;qu
+REG#verbe:er;nom:ation;qu,g
 REG#verbe:quer;nom:cation;
+REG#verbe:ger;nom:geation;
 REG#verbe:er;nom:ance;g
 REG#verbe:ger;nom:geance;
 REG#verbe:uer;nom:ution;
@@ -23,12 +30,16 @@ REG#verbe:er;nom:e;
 REG#verbe:er;nom:aison;g
 REG#verbe:ger;nom:geaison;
 REG#verbe:cer;nom:ciation;
-REG#verbe:er;nom:ard;
-REG#verbe:er;nom:arde;
+REG#verbe:er;nom:ard;g
+REG#verbe:ger;nom:geard;
+REG#verbe:er;nom:arde;g
+REG#verbe:ger;nom:gearde;
 REG#verbe:ner;nom:nier;
 REG#verbe:er;nom:ette;
-REG#verbe:er;nom:ant;
-REG#verbe:er;nom:ante;
+REG#verbe:er;nom:ant;g
+REG#verbe:ger;nom:geant;
+REG#verbe:er;nom:ante;g
+REG#verbe:ger;nom:geante;
 REG#verbe:er;adj:elle;
 REG#verbe:er;adj:ible;
 REG#verbe:uire;nom:uction;
@@ -46,11 +57,12 @@ REG#verbe:lir;nom:lissage;
 REG#verbe:lir;nom:lissement;
 REG#verbe:er;verbe:ant;g
 REG#verbe:ger;verbe:geant;
-REG#verbe:er;verbe:ante;g
-REG#verbe:ger;verbe:geante;
+#verbe:er;verbe:ante;g
+#verbe:ger;verbe:geante;
 REG#verbe:er;verbe:e;
 REG#verbe:er;verbe:es;
-REG#verbe:er;verbe:ons;
+REG#verbe:er;verbe:ons;g
+REG#verbe:ger;verbe:geons;
 REG#verbe:er;verbe:ez;
 REG#verbe:er;verbe:ent;
 REG#verbe:uire;verbe:uis;
@@ -110,3 +122,5 @@ REG#adj:tif;nom:tivité;
 REG#adj:al;adj:aux;
 REG#adj:al;adj:ale;
 REG#adj:el;adj:elle;
+REG#verbe:er;adj:ant;
+REG#verbe:er;adj:ante;
