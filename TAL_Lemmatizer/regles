@@ -1,8 +1,4 @@
 MOT#manger
-MOT#conduire
-MOT#finir
-MOT#cheville
-MOT#rouge
 
 REG#verbe:er;nom:eur;
 REG#verbe:er;nom:euse;
@@ -62,11 +58,11 @@ REG#verbe:uire;verbe:uit;
 REG#verbe:uire;verbe:uisons;
 REG#verbe:uire;verbe:uisez;
 REG#verbe:uire;verbe:uisent;
-REG#verbe:ir;verbe:s;
-REG#verbe:ir;verbe:t;
-REG#verbe:ir;verbe:ssons;
-REG#verbe:ir;verbe:ssez;
-REG#verbe:ir;verbe:ssent;
+REG#verbe:ir;verbe:is;
+REG#verbe:ir;verbe:it;
+REG#verbe:ir;verbe:issons;
+REG#verbe:ir;verbe:issez;
+REG#verbe:ir;verbe:issent;
 REG#verbe:dre;verbe:ds;
 REG#verbe:dre;verbe:d;
 REG#verbe:dre;verbe:dons;

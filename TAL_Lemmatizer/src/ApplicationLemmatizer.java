@@ -56,25 +56,30 @@ public class ApplicationLemmatizer {
 			System.out.println("     ** INITIALISATION DU MOT");
 			ArrayList<String> mot_gramm = new ArrayList<String>();
 			mot_gramm.add(m);
-			mot_gramm.addAll(getClaGrammFromWord(rezo, getMot(rezo, mot_gramm.get(0), res.get("erreurs")), res.get("erreurs")));
-			System.out.println("Mot : '" + mot_gramm.get(0) + "'");
-			System.out.println("Classe grammaticale : " + mot_gramm);
-			
-			
-			System.out.println("     ** CREATION DES MOTS A PARTIR DE '" + mot_gramm.get(0) + "'");
-			editWord(rezo, categorie, res, mot_gramm);
-			
-			
-			System.out.println("     ** RESULTATS");
-			System.out.println("* Les mots existent :");
-			for (String s : res.get("existe")) {
-				System.out.println("    " + s);
+			Mot mot = getMot(rezo, mot_gramm.get(0), res.get("erreurs"));
+			if (mot != null) {
+				mot_gramm.addAll(getClaGrammFromWord(rezo, mot, res.get("erreurs")));
+				System.out.println("Mot : '" + mot_gramm.get(0) + "'");
+				System.out.println("Classe grammaticale : " + mot_gramm);
+				
+				
+				System.out.println("     ** CREATION DES MOTS A PARTIR DE '" + mot_gramm.get(0) + "'");
+				editWord(rezo, categorie, res, mot_gramm);
+				
+				
+				System.out.println("     ** RESULTATS");
+				System.out.println("* Les mots existent :");
+				for (String s : res.get("existe")) {
+					System.out.println("    " + s);
+				}
+				System.out.println("* Les mots n'existent pas :");
+				for (String s : res.get("existePas")) {
+					System.out.println("    " + s);
+				}
+				System.out.println("* Les mots non vérifiés (suite à une erreur) : " + res.get("erreurs"));
+			} else {
+				System.out.println("Le mot '" + m + "' n'existe pas !!");
 			}
-			System.out.println("* Les mots n'existent pas :");
-			for (String s : res.get("existePas")) {
-				System.out.println("    " + s);
-			}
-			System.out.println("* Les mots non vérifiés (suite à une erreur) : " + res.get("erreurs"));
 			
 			System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\n\n");
 		}
@@ -181,8 +186,9 @@ public class ApplicationLemmatizer {
 												existePas.remove(class_gramm_new + ":" + newWord);
 										} else if (!err.contains(newWord)) {
 											if (!existePas.contains(r.getNewTag() + ":" + newWord) &&
-													!existe.contains(r.getNewTag() + ":" + newWord))
+													!existe.contains(r.getNewTag() + ":" + newWord)) {
 												existePas.add(r.getNewTag() + ":" + newWord);
+											}
 										}
 									}
 								} else if (!err.contains(newWord)) {
@@ -217,23 +223,14 @@ public class ApplicationLemmatizer {
 		ArrayList<String> sortie = new ArrayList<String>();
 		for (Terme t : termes) {
 			String classe = null; //TODO verifier juste le debut du truc envoyer
-			switch (t.getTerme()) {
-			case "Adj:" :
+			if (t.getTerme().startsWith("Adj:")) {
 				classe = "adj";
-				break;
-			case "Nom:" :
+			} else if (t.getTerme().startsWith("Nom:")) {
 				classe = "nom";
-				break;
-			case "Ver:Inf" :
-			case "Ver:PPre" :
-			case "Ver:" :
+			} else if (t.getTerme().startsWith("Ver:")) {
 				classe = "verbe";
-				break;
-			case "Adv:" :
+			} else if (t.getTerme().startsWith("Adv:")) {
 				classe = "adv";
-				break;
-//			default :
-//				sortie.add(t.getTerme());
 			}
 			if (!sortie.contains(classe) && classe != null) sortie.add(classe);
 		}
